@@ -1,14 +1,15 @@
 "use client"
 
 import Image from "next/image"
+import { getAssetPath } from "@/lib/utils"
 
 const projects = [
-  { id: 1, title: "Project One", category: "Website", image: "/project-website.png" },
-  { id: 2, title: "Project Two", category: "App", image: "/project-app.png" },
-  { id: 3, title: "Project Three", category: "UI/UX", image: "/project-uiux.png" },
-  { id: 4, title: "Project Four", category: "Website", image: "/project-website-2.png" },
-  { id: 5, title: "Project Five", category: "App", image: "/project-app-2.png" },
-  { id: 6, title: "Project Six", category: "Branding", image: "/project-branding.png" },
+  { id: 1, title: "Project One", category: "Website", image: getAssetPath("/project-website.png") },
+  { id: 2, title: "Project Two", category: "App", image: getAssetPath("/project-app.png") },
+  { id: 3, title: "Project Three", category: "UI/UX", image: getAssetPath("/project-uiux.png") },
+  { id: 4, title: "Project Four", category: "Website", image: getAssetPath("/project-website-2.png") },
+  { id: 5, title: "Project Five", category: "App", image: getAssetPath("/project-app-2.png") },
+  { id: 6, title: "Project Six", category: "Branding", image: getAssetPath("/project-branding.png") },
 ]
 
 export default function Projects() {

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import { getAssetPath } from "@/lib/utils"
 
 export default function Hero() {
   return (
@@ -26,7 +27,7 @@ export default function Hero() {
             <div className="relative w-64 h-64 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-3xl opacity-50" />
               <Image
-                src="/hero-image.png"
+                src={getAssetPath("/hero-image.png")}
                 alt="Hero Image"
                 fill
                 className="object-contain drop-shadow-2xl"
